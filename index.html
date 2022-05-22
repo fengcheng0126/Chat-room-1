@@ -7,32 +7,59 @@
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Str333aK" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: paleturquoise;
+        padding: 35px;
+      }
+      h1 {
+        color: navy;
+        font-size: 69px;
+      }
+      h2 {
+        font-size: 40px;
+      }
+      p {
+        color: #C533FF;
+      }
+      .toggleButton {
+        border: outset;
+        background-color: aquamarine;
+        padding: 7px;
+        font-size: 30px;
+        border-width: 7px;
+        display: block;
+      }
+    </style>
     <title>Home | Schoology</title>
   </head>
 
   <body>
     <div>
-      <h1>The Chat room</h1>
-      <hr />
-      <p>
-        If you are new here and do not know the rules or are a complete idiot
-        then read the rules below VVV
-      </p>
-    </div>
-    <div>
-      <h2>Andrew's Chat Room</h2>
-      <iframe
-        src="https://deadsimplechat.com/95bKNW3WL"
-        width="100%"
-        height="650px"
-      ></iframe>
-    </div>
-    <div>
-      <h2>RULES:</h2>
+      <h1>The Chat Room</h1>
+      <h2>Current version: v0.3.0 Beta</h2>
+      <span>
+        If you are not at the most current version, please update from the
+        document. The document will have the most current version in the title.
+      </span>
+      <h3>Press button toggle element on and off. Copy Paste the Javascript into the console and it will work.</h3>
+      <div class="sidenav" id="sidenavbutton">
+        <button onclick="acr()" class="toggleButton">New Chat Room</button>
+        <button onclick="vtscr()" class="toggleButton">Old Chat Room</button>
+        <button onclick="twoPlayer()" class="toggleButton">Two Player Battle</button>
+        <button onclick="rules()" class="toggleButton">Rules</button>
+        <button onclick="updateLog()" class="toggleButton">Update Log</button>
+        </div>
+        <h2>
+          If you are new here and do not know the rules or are a complete idiot
+          then read the rules below.
+        </h2>
       <div>
+      <h2>RULES:</h2>
+      <div id="rulesLog">
         <ul>
           <li>
-            NO CUSSING, or you will get a warning. Second time you do it, u get
+            NO SWEARING, or you will get a warning. Second time you do it, u get
             banned for a few(2-5 days)
           </li>
           <li>
@@ -40,26 +67,39 @@
             ඞඞඞඞඞඞ
           </li>
           <li>
-            Be nice. Just be nice. I think you know what that means. You are
-            smart enough. If not, I will take you to court.
-          </li>
+              Be nice. Just be nice. I think you know what that means. You are
+              smart enough. If not, I will take you to Judge Judy. I'm serious.
+            </li>
           <li>You have to be in at least 1 TAG course</li>
           <li>
-            Limit to username switches is 3x per day. Tell ppl who you are when
-            you switch names.
+            Limit to username switches is 3x per day. Tell people who you are
+            when you switch names.
           </li>
-          <li>No alts. That will clog the 20 person limit.</li>
           <li>
-            If you don't subscribe to Str333aK Gaming, you will get banned.
+            No alts. That will clog the 20 person limit. No spamming either or random messages.
+          </li>
+          <li>You must tell people who you are when they ask. Or you'll get banned and I will block you from the doc. And I will call you out on Youtube.
+          </li>
+          <li>
+            If you don't subscribe to Str333aK Gaming, you will get banned, also your are uncool and don't like 69.
             Subscribe here:
             <a href="https://www.youtube.com/channel/UCHbUDhJrfIsibtTPfHdTtmA">
               Str333aK Gaming
-            </a>
+              </a>
           </li>
         </ul>
-      </div>
-      <div>
-        <h2>Vinay, Tiger, and Sean's Original Chat Room</h2>
+    </div>
+    <div>
+    
+      <nav>
+        <h2>New Chat Room</h2>
+        <iframe
+          src="https://deadsimplechat.com/95bKNW3WL"
+          width="100%"
+          height="690px"
+          id="ar"
+        ></iframe>
+        <h2>Old Chat Room</h2>
         <iframe
           src="https://deadsimplechat.com/ZW1Bpgim7"
           name="iFrame Name"
@@ -67,17 +107,84 @@
           height="675px"
           width="100%"
           style="border: none;"
+          id="vtsr"
         ></iframe>
-      </div>
-      <hr />
-      <div>
-        <h2>Update log</h2>
-        <p>v0.0.1 Vinay, Tiger, and Sean's room made 4/20/2022</p>
-        <p>v0.0.2 Andrew's room made(Beta) 4/26/2022</p>
-        <p>v0.1.0 Officially Created 4/27/2022</p>
-        <p>v0.2.0 Rules added 4/28/2022</p>
-        <p>v0.2.0-v0.2.1 Minor Changes to rules and asthetics 4/28/2022</p>
-      </div>
+        <h2>Two Player Battle</h2>
+        <iframe 
+          src="https://scratch.mit.edu/projects/292728003/embed" 
+          allowtransparency="true" 
+          width="870" height="804" 
+          frameborder="0" 
+          scrolling="no" 
+          allowfullscreen
+          id="twoPlayer"
+        ></iframe>
+      </nav>
     </div>
+    <h2>Update log</h2>
+    <div id="updateLog">
+      <p>v0.0.1 Vinay, Tiger, and Sean's room made 4/20/2022</p>
+      <p>v0.0.2 Andrew's room made(Beta) 4/26/2022</p>
+      <hr>
+      <p>v0.1.0 Officially Created 4/27/2022</p>
+      <hr>
+      <p>v0.2.0 Rules added 4/28/2022</p>
+      <p>v0.2.1 Minor Changes to rules and aesthetics 4/28/2022</p>
+      <p>v0.2.2 Current version added, minor changes 4/29/2022</p>
+      <p>v0.2.3 CSS added 4/29/2022</p>
+      <p>v0.2.4 Rules got put at the top 4/29/2022</p>
+      <p>v0.2.5 Added Structure of Button Show/Hide Structure 4/29/2022</p>
+      <p>v0.2.6 Buttons do not work in about:blank, also new rule changes 4/29/2022</p>
+      <p>v0.2.7 Buttons now work, just copy paste the javascript into the console. 5/2/2022</p>
+      <p>v0.2.8 Buttons now work without copy and pasting javascript(but don't work the same way buttons do) 5/3/2022</p>
+      <p>v0.2.9 Re-added JavaScript, it's better. Minor touches. 5/4/2022</p>
+      <hr>
+      <p>v3.0.0 Added Two Player Battle, minor changes</p>
+
+    </div>
+    <script>
+//The Javascript
+function acr() {
+  var x = document.getElementById("ar");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function vtscr() {
+  var y = document.getElementById("vtsr");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+}
+function rules() {
+  var z = document.getElementById("rulesLog");
+  if (z.style.display === "none") {
+    z.style.display = "block";
+  } else {
+    z.style.display = "none";
+  }
+}
+function updateLog() {
+  var a = document.getElementById("updateLog");
+  if (a.style.display === "none") {
+    a.style.display = "block";
+  } else {
+    a.style.display = "none";
+  }
+}
+function twoPlayer() {
+  var b = document.getElementById("twoPlayer");
+  if (b.style.display === "none") {
+    b.style.display = "block";
+  } else {
+    b.style.display = "none";
+  }
+}
+//End of Javascript
+    </script>
   </body>
 </html>
